@@ -11,6 +11,23 @@
 	</parent>
 	<groupId>com.configserverclient</groupId>
 	<artifactId>configserverclient</artifactId>
+	<profiles>
+    <profile>
+        <id>dev</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <spring.profiles.active>dev</spring.profiles.active>
+        </properties>
+    </profile>
+    <profile>
+        <id>prod</id>
+        <properties>
+            <spring.profiles.active>prod</spring.profiles.active>
+        </properties>
+    </profile>
+</profiles>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>configserverclient</name>
 	<description>Demo project for Spring Boot</description>
